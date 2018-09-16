@@ -4,7 +4,8 @@ import LinkList from "./LinkList";
 import CreateLink from "./CreateLink";
 import LogIn from "./LogIn";
 import Header from "./Header";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route ,Redirect } from "react-router-dom";
+import Search from "./Search";
 
 class App extends Component {
   render() {
@@ -17,6 +18,9 @@ class App extends Component {
               <Route exact path="/" component={LinkList} />
               <Route exact path="/create" component={CreateLink} />
               <Route exact path="/login" component={LogIn} />
+              <Route exact path="/search" component={Search} />
+              <Route exact path="/top" component={LinkList} />
+              <Route exact path="/new/:page" component={LinkList} />
             </Switch>
           </div>
         </div>
